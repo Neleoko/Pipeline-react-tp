@@ -57,11 +57,7 @@ jobs:
           name: build
           path: build/
 
-      - name: "Deploy Github Pages"
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages     # <- Branche sur laquelle seront commités les fichiers
-          folder: build
+
 
   test:
     runs-on: ubuntu-latest
