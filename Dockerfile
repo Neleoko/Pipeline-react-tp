@@ -27,4 +27,4 @@ COPY --from=build /app/build .
 EXPOSE 3000
 
 # Commande de démarrage de l'application
-CMD ["serve", "-s", "build", "-l", "3000"]
+CMD ["serve", "-s", ".", "-l", "3000"]
