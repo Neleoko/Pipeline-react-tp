@@ -1,5 +1,5 @@
 # Utilisation d'une image Node.js officielle (adapter si nécessaire)
-FROM node:18 AS builds
+FROM node:18 AS build
 
 # Définition du répertoire de travail dans le conteneur
 WORKDIR /app
