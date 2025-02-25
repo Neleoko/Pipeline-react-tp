@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Commande de démarrage de l'application
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build", "-l", "3000"]
