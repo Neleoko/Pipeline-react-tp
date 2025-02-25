@@ -13,7 +13,7 @@
         - name: Checkout repository
           uses: actions/checkout@v3
 
-        - name: Setup SSH
+        - name: Setup SSH connexion
           run: |
             mkdir -p ~/.ssh
             echo "${{ secrets.SSH_PRIVATE_KEY }}" | base64 --decode > ~/.ssh/id_rsa
