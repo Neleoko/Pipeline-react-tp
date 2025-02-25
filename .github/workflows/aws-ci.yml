@@ -23,12 +23,12 @@
         - name: Deploy to EC2 with docker
           run: |
             ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-            cd ${{ secrets.WORK_DIR }}
-            git pull origin ${{ secrets.MAIN_BRANCH }}
-            docker compose down
-            docker rmi $(docker images -q)
-            docker compose up --build -d
-            docker system prune -af
+              cd ${{ secrets.WORK_DIR }}
+              git pull origin ${{ secrets.MAIN_BRANCH }}
+              docker-compose down
+              docker rmi $(docker images -q)
+              docker system prune -af
+              docker-compose up --build -d
             EOF
         - name: Cleanup
           run: rm -rf ~/.ssh
